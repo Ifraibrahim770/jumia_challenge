@@ -14,7 +14,7 @@ public class CustomerService {
 
     public List<Customer> retrieveCustomersByStateAndCountry(String country, String state) {
 
-        return customerDAO.selectAllCustomers(country,state);
+        return customerDAO.selectCustomersByStateorCountry(country,state);
     }
 
 

@@ -32,7 +32,7 @@ public class CustomerDAOImpl implements CustomerDAO {
     }
 
     @Override
-    public List<Customer> selectAllCustomers(String country, String state) {
+    public List<Customer> selectCustomersByStateorCountry(String country, String state) {
         List<Customer> customers = null;
         try {
             ResultSet rs = statement.executeQuery("select id, name, phone from customer");
