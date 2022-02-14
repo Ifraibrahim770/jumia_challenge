@@ -48,30 +48,31 @@ public class CustomerDAOImpl implements CustomerDAO {
 
             }
 
-            if (country != null && state == null) {
-                return customers
-                        .stream()
-                        .filter(customer -> country.equalsIgnoreCase(customer.getCountry()))
-                        .collect(Collectors.toList());
-            } else if (country == null && state != null) {
-                return customers
-                        .stream()
-                        .filter(customer -> state.equalsIgnoreCase(customer.getState()))
-                        .collect(Collectors.toList());
-            } else if (country != null && state != null) {
-                return customers
-                        .stream()
-                        .filter(customer -> state.equalsIgnoreCase(customer.getState()))
-                        .filter(customer -> country.equalsIgnoreCase(customer.getCountry()))
-                        .collect(Collectors.toList());
+            if(customers.size() > 0) {
+
+                if (country != null && state == null) {
+                    return customers
+                            .stream()
+                            .filter(customer -> country.equalsIgnoreCase(customer.getCountry()))
+                            .collect(Collectors.toList());
+                } else if (country == null && state != null) {
+                    return customers
+                            .stream()
+                            .filter(customer -> state.equalsIgnoreCase(customer.getState()))
+                            .collect(Collectors.toList());
+                } else if (country != null && state != null) {
+                    return customers
+                            .stream()
+                            .filter(customer -> state.equalsIgnoreCase(customer.getState()))
+                            .filter(customer -> country.equalsIgnoreCase(customer.getCountry()))
+                            .collect(Collectors.toList());
+                }
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return customers;
-
     }
 
 }
