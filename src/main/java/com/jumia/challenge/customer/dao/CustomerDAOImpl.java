@@ -32,8 +32,8 @@ public class CustomerDAOImpl implements CustomerDAO {
     }
 
     @Override
-    public List<Customer> selectCustomersByStateorCountry(String country, String state) {
-        List<Customer> customers = null;
+    public List<Customer> selectCustomersByStateOrCountry(String country, String state) {
+        LinkedList<Customer> customers = null;
         try {
             ResultSet rs = statement.executeQuery("select id, name, phone from customer");
             customers = new LinkedList<>();

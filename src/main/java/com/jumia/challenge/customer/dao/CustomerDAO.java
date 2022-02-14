@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface CustomerDAO {
 
-    List<Customer> selectCustomersByStateorCountry(String country, String state);
+    List<Customer> selectCustomersByStateOrCountry(String country, String state);
 
 
 }
