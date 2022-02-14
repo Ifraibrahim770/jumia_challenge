@@ -2,7 +2,7 @@
 
 
 ## To deploy the project (Locally):<br>
- - Install Docker (get it from here: https://docs.docker.com/get-docker/) and make sure its added to the PATH
+ - Install Docker (get it from [HERE](https://docs.docker.com/get-docker/):  and make sure its added to the PATH
  - Navigate to the project's root directory
  - Open a terminal session using Windows Terminal, GitBash or any other CLI tool 
  - run the command:<br>
