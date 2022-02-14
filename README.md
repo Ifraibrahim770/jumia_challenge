@@ -1,14 +1,15 @@
 # jumia_challenge
 
 
-To deploy the project (Locally):<br>
- - Install Docker (get it from here: https://docs.docker.com/get-docker/)
+## To deploy the project (Locally):<br>
+ - Install Docker (get it from here: https://docs.docker.com/get-docker/) and make sure its added to the PATH
  - Navigate to the project's root directory
- - run the command:
-  - docker-compose up
+ - Open a terminal session using Windows Terminal, GitBash or any other CLI tool 
+ - run the command:<br>
+   ```docker-compose up ``` 
  - Wait for the image to build and run on port 8080
 
-Project Endpoints:<br>
+## Project Endpoints:<br>
  - 127.0.0.1:8080/customers<br>
    Returns a webpage with all customers (zero filters)
  - 127.0.0.1:8080/customers?country={Country}<br>
