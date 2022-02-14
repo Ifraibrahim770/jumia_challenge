@@ -4,7 +4,8 @@
 To deploy the project (Locally):<br>
  - Install Docker (get it from here: https://docs.docker.com/get-docker/)
  - Navigate to the project's root directory
- - run the command: <strong>docker-compose up </strong> on the terminal
+ - run the command:
+  - docker-compose up
  - Wait for the image to build and run on port 8080
 
 Project Endpoints:<br>
@@ -21,3 +22,5 @@ Project Endpoints:<br>
    
  - 127.0.0.1:8080/customers?state={State}&country={Country}<br>
    returns a webpage with all customers filtered by the specified state and country e.g  127.0.0.1:8080/customers?country=Morocco&state=VALID
+   
+
