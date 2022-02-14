@@ -45,28 +45,31 @@ public class CustomerDAOImpl implements CustomerDAO {
                                 rs.getString("phone")
                         )
                 );
+
             }
+
+            if (country != null && state == null) {
+                return customers
+                        .stream()
+                        .filter(customer -> country.equalsIgnoreCase(customer.getCountry()))
+                        .collect(Collectors.toList());
+            } else if (country == null && state != null) {
+                return customers
+                        .stream()
+                        .filter(customer -> state.equalsIgnoreCase(customer.getState()))
+                        .collect(Collectors.toList());
+            } else if (country != null && state != null) {
+                return customers
+                        .stream()
+                        .filter(customer -> state.equalsIgnoreCase(customer.getState()))
+                        .filter(customer -> country.equalsIgnoreCase(customer.getCountry()))
+                        .collect(Collectors.toList());
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        if (country != null && state == null) {
-            return customers
-                    .stream()
-                    .filter(customer -> country.equalsIgnoreCase(customer.getCountry()))
-                    .collect(Collectors.toList());
-        } else if (country == null && state != null) {
-            return customers
-                    .stream()
-                    .filter(customer -> state.equalsIgnoreCase(customer.getState()))
-                    .collect(Collectors.toList());
-        } else if (country != null && state != null) {
-            return customers
-                    .stream()
-                    .filter(customer -> state.equalsIgnoreCase(customer.getState()))
-                    .filter(customer -> country.equalsIgnoreCase(customer.getCountry()))
-                    .collect(Collectors.toList());
-        }
         return customers;
 
     }
