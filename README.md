@@ -2,7 +2,7 @@
 
 
 To deploy the project (Locally):<br>
- - Install Docker 
+ - Install Docker (get it from here: https://docs.docker.com/get-docker/)
  - Navigate to the project's root directory
  - run the command: <strong>docker-compose up </strong> on the terminal
  - Wait for the image to build and run on port 8080
