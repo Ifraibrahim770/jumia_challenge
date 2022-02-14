@@ -4,8 +4,8 @@
 To deploy the project (Locally):<br>
  - Install Docker 
  - Navigate to the project's root directory
- - run the command: <strong>docker-compose up --build</strong> on the terminal
- - Once the image is succesfully created, run the command  <strong>docker run -e SERVER_PORT=8080 -p 8080:8080 jumia_api</strong> (this will initialize the application on port 8080)
+ - run the command: <strong>docker-compose up </strong> on the terminal
+ - Wait for the image to build and run on port 8080
 
 Project Endpoints:<br>
  - 127.0.0.1:8080/customers<br>
